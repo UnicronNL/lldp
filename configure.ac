@@ -20,12 +20,13 @@ AC_CONFIG_FILES([Makefile src/Makefile man/Makefile tests/Makefile])
 AC_CONFIG_MACRO_DIR([m4])
 
 # Configure automake
-AM_INIT_AUTOMAKE([foreign -Wall -Werror])
+AM_INIT_AUTOMAKE([foreign -Wall])
 AM_MAINTAINER_MODE
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES(yes)])
 
 # Configure libtool
 #LT_PREREQ([2.2])
+AM_PROG_AR
 LT_INIT
 
 #######################
